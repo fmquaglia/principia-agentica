@@ -1,5 +1,9 @@
 # justfile for Principia Agentica
 
+
+# --- Variables ---
+REQUIREMENTS_FILE := "requirements.txt"
+
 # --- Setup ---
 # Creates a new virtual environment using uv
 setup:
@@ -8,6 +12,18 @@ setup:
 # Installs dependencies from pyproject.toml into the virtual environment
 install:
     uv pip install -e ".[dev]"
+
+# Lock the project dependencies into a requirements.txt file
+lock:
+    @echo "Locking dependencies from pyproject.toml -> {{REQUIREMENTS_FILE}}..."
+    @uv pip compile pyproject.toml -o {{REQUIREMENTS_FILE}}
+    @echo "✅ Dependencies locked."
+
+# Sync the virtual environment with the lock file
+sync:
+    @echo "Syncing environment with {{REQUIREMENTS_FILE}}..."
+    @uv pip sync {{REQUIREMENTS_FILE}}
+    @echo "✅ Environment synced."
 
 # --- Development ---
 activate:
