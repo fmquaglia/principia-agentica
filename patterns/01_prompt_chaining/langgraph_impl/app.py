@@ -122,6 +122,7 @@ class _AppAdapter:
 
 def build_app() -> any:
     workflow = StateGraph(State)
+    workflow.add_edge(START, "summarizer")
     workflow.add_node("summarizer", summarize_and_extract_sentiment)
     workflow.add_node("tweet_generator", generate_tweet)
 

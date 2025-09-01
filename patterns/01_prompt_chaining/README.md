@@ -115,9 +115,61 @@ just test
 
 This runs pytest, which includes tests for the LangGraph implementation.
 
+## How to run the agent (LangGraph Functional API)
+
+This repository also includes an implementation of the same workflow using the LangGraph Functional API:
+
+- patterns/01_prompt_chaining/langgraph_functional_impl/functional_app.py
+
+Because Python module names cannot start with a digit, we can’t import packages under 01_prompt_chaining via a normal dotted import path. To keep things simple, we load the package initializer for langgraph_impl using importlib and access the exported build_functional_app from there (the __init__.py re-exports it for convenience).
+
+We use Python 3.12+, uv, and just for workflow commands.
+
+### 1) Setup the environment (same as above)
+
+```
+just setup
+just install
+```
+
+### 2) Quick demo (Python one-liner)
+
+From the project root, run:
+
+```
+python -c "import importlib.util, pathlib; p = pathlib.Path('patterns/01_prompt_chaining/langgraph_impl/__init__.py'); spec = importlib.util.spec_from_file_location('langgraph_impl_pkg', str(p)); m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m); app = m.build_functional_app(); print(app.invoke({'ticket': 'Customer reported a login bug yesterday. We shipped a fix overnight. User confirmed it\'s resolved and thanked the team.'}))"
+```
+
+You should see a dictionary with keys: summary, sentiment, and for positive sentiment, tweet (<= 280 chars).
+
+### 3) Interactive REPL snippet
+
+```
+>>> import importlib.util, pathlib
+>>> p = pathlib.Path('patterns/01_prompt_chaining/langgraph_impl/__init__.py')
+>>> spec = importlib.util.spec_from_file_location('langgraph_impl_pkg', str(p))
+>>> m = importlib.util.module_from_spec(spec)
+>>> spec.loader.exec_module(m)
+>>> app = m.build_functional_app()
+>>> state = app.invoke({"ticket": "Export failed intermittently; investigating. No resolution yet."})
+>>> state
+{'summary': '...', 'sentiment': 'Neutral'}
+```
+
+You can also stream updates if desired:
+
+```
+>>> for step in app.stream("Login bug fixed; user thanked the team."):
+...     print(step)
+```
+
 ### Notes & Troubleshooting
 
+- The Functional API implementation is deterministic like the Graph API example; no API keys are required.
+- If you moved files, ensure the path to patterns/01_prompt_chaining/langgraph_impl/__init__.py is correct in your importlib snippet.
+- As an alternative, you can point importlib directly to patterns/01_prompt_chaining/langgraph_functional_impl/__init__.py and access build_functional_app there as well.
+
+### General Notes
+
 - Ensure you ran just install before importing; it performs an editable install so that patterns/* can be imported.
-- No API keys are needed — this implementation is heuristic and deterministic for local testing.
-- If you use a different interpreter than the one in .venv, either activate it (just activate) or run the python
-  commands using ./.venv/bin/python.
+- If you use a different interpreter than the one in .venv, either activate it (just activate) or run the python commands using ./.venv/bin/python.
