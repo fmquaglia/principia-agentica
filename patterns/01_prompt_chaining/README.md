@@ -73,14 +73,14 @@ just setup
 just install
 ```
 
-This performs an editable install so you can import patterns.* directly.
+This performs an editable installation so you can import patterns.* directly.
 
 ### 2) Quick demo (Python one-liner)
 
 From the project root, run:
 
 ```
-python -c "from patterns.01_prompt_chaining.langgraph_impl import build_app; app = build_app(); print(app.invoke({ 'ticket': 'Customer reported a login bug yesterday. We shipped a fix overnight. User confirmed it\'s resolved and thanked the team.' }))"
+python -c "from patterns.prompt_chaining import build_app; app = build_app(); print(app.invoke({ 'ticket': 'Customer reported a login bug yesterday. We shipped a fix overnight. User confirmed it\'s resolved and thanked the team.' }))"
 ```
 
 You should see a dictionary output with keys: summary, sentiment, and for positive sentiment, tweet (<= 280 chars).
@@ -100,7 +100,7 @@ Example shape:
 Alternatively, open Python and run:
 
 ```
->>> from patterns.01_prompt_chaining.langgraph_impl import build_app
+>>> from patterns.prompt_chaining import build_app
 >>> app = build_app()
 >>> state = app.invoke({"ticket": "Export failed intermittently; investigating. No resolution yet."})
 >>> state
