@@ -6,8 +6,7 @@ A practical exploration into the architectural patterns of modern AI agents.
 
 The world of AI agents is exploding with new frameworks, tools, and techniques. While exciting, it can be challenging to
 navigate this rapidly changing landscape. Inspired by the foundational patterns outlined in Anthropic's excellent
-article, ["Building effective agents"](https://www.anthropic.com/engineering/building-effective-agents), this repository
-is my journey to bridge the gap between theory and practice.
+article, ["Building effective agents"](https://www.anthropic.com/engineering/building-effective-agents), this repository is my journey to bridge the gap between theory and practice.
 
 My goal is to implement key agentic patterns across several popular frameworks, not just to see *if* they can be built,
 but to understand *how* they feel to build, maintain, and adapt. This is an exploration of architecture, developer

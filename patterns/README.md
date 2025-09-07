@@ -27,17 +27,17 @@ project would evolve.
 Each numbered folder represents a new chapter in the Sentinel Project's story, tackling a more complex user story and
 demonstrating a more advanced agentic pattern:
 
-* **[01_prompt_chaining](./01_prompt_chaining/): The Quick Win.** We start by addressing a simple request from the
+* **[prompt_chaining](./prompt_chaining/): The Quick Win.** We start by addressing a simple request from the
   Community Manager to automate the creation of social media posts from resolved support tickets.
 
-* **[02_evaluator_optimizer](./02_evaluator_optimizer/): Adding Quality Control.** The Marketing Head now requires that
+* **[evaluator_optimizer](./evaluator_optimizer/): Adding Quality Control.** The Marketing Head now requires that
   the generated content meets the company's brand voice, forcing us to implement an automated quality assurance loop.
 
-* **[03_agent_computer_interface](./03_agent_computer_interface/): Building the Tools.** To scale, Project Sentinel
+* **[agent_computer_interface](./agent_computer_interface/): Building the Tools.** To scale, Project Sentinel
   needs to interact directly with InnovateNow's APIs (Zendesk, Twitter, etc.). This chapter focuses on the crucial task
   of designing the agent's "hands".
 
-* **[04_super_workflow](./04_super_workflow/): The Full Intelligence Report.** Finally, the Head of Product requests a
+* **[super_workflow](./super_workflow/): The Full Intelligence Report.** Finally, the Head of Product requests a
   comprehensive weekly intelligence report, requiring a sophisticated, multi-step agent that can research, analyze, and
   synthesize information from multiple sources.
 
