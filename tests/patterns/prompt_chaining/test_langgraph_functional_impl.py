@@ -1,29 +1,8 @@
-from __future__ import annotations
-
-import importlib.util
-from pathlib import Path
-
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
-PKG_INIT_FILE = PROJECT_ROOT / "patterns" / "01_prompt_chaining" / "langgraph_impl" / "__init__.py"
-
-
-def load_pkg_init():
-    spec = importlib.util.spec_from_file_location("langgraph_impl_pkg", str(PKG_INIT_FILE))
-    if spec is None or spec.loader is None:
-        raise RuntimeError("Failed to load langgraph_impl package __init__ module spec")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)  # type: ignore[attr-defined]
-    return module
-
-
-def test_functional_export_present():
-    pkg = load_pkg_init()
-    assert hasattr(pkg, "build_functional_app"), "__init__ must export build_functional_app"
+from patterns.prompt_chaining.langgraph_functional_impl.functional_app import build_functional_app
 
 
 def test_functional_positive_flow_generates_tweet():
-    pkg = load_pkg_init()
-    app = pkg.build_functional_app()
+    app = functional_app.build_functional_app()
 
     ticket = (
         "Customer reported login bug yesterday. Our team deployed a fix overnight. "
@@ -40,8 +19,7 @@ def test_functional_positive_flow_generates_tweet():
 
 
 def test_functional_non_positive_exits_without_tweet():
-    pkg = load_pkg_init()
-    app = pkg.build_functional_app()
+    app = functional_app.build_functional_app()
 
     ticket = (
         "User reports that the export feature fails intermittently. Logs show timeouts. "
