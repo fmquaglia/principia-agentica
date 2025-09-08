@@ -11,7 +11,7 @@ setup:
 
 # Installs dependencies from pyproject.toml into the virtual environment
 install:
-    uv pip install -e ".[dev]"
+    uv pip install -r pyproject.toml
 
 # Lock the project dependencies into a requirements.txt file
 lock:
@@ -24,6 +24,11 @@ sync:
     @echo "Syncing environment with {{REQUIREMENTS_FILE}}..."
     @uv pip sync {{REQUIREMENTS_FILE}}
     @echo "✅ Environment synced."
+
+env:
+    @echo "Creating environment variable file"
+    @cp .env.example .env
+    @echo "Created environment variable file. Update with the right variables."
 
 # --- Development ---
 activate:
