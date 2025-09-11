@@ -8,4 +8,5 @@ dependencies = [
     "langgraph>=0.6.6",
     "langchain-google-genai",
     "dotenv>=0.9.9",
+    "typer>=0.17.4",
 ]
