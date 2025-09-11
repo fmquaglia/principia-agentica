@@ -1,8 +1,9 @@
+from langchain_core.runnables import RunnableLambda
 from .prompts import summarize_and_get_sentiment_prompt, generate_tweet_prompt
 from .schemas import GraphState
 from .models import get_structured_summarizer, get_structured_tweeter
 
-
+@RunnableLambda
 def summarize_and_get_sentiment(state: GraphState, llm):
     """
     Summarizes the ticket and extracts the user's sentiment.
@@ -13,7 +14,7 @@ def summarize_and_get_sentiment(state: GraphState, llm):
 
     return {"summary": response.summary, "sentiment": response.sentiment}
 
-
+@RunnableLambda
 def generate_tweet(state: GraphState, llm):
     """
     Generates a tweet based on the summary and sentiment.
