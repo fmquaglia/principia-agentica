@@ -8,6 +8,19 @@ dependencies = [
     "langgraph>=0.6.6",
     "mkdocs-material>=9.6.19",
     "langchain-google-genai",
-    "dotenv>=0.9.9",
     "typer>=0.17.4",
+    "python-dotenv>=1.1.1",
+    "langchain>=0.3.27",
 ]
+
+[project.optional-dependencies]
+dev = [
+    # Dependencias de desarrollo como 'ruff', 'pytest', 'jupyter'
+    "ruff",
+    "pytest",
+    "jupyterlab",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*"]

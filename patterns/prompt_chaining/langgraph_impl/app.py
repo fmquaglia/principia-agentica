@@ -25,14 +25,19 @@ def build_graph():
     Construye y compila el grafo de LangGraph.
     Esta función es el corazón de la orquestación.
     """
+
+    llm = get_llm()
+
+    summarizer_with_llm = summarize_and_get_sentiment.bind(llm=llm)
+    tweet_generator_with_llm = generate_tweet.bind(llm=llm)
     # Define el grafo con nuestro estado compartido
     workflow = StateGraph(GraphState)
 
     # 1. Añade los nodos
     #    Cada nodo es una función que realiza una acción.
     #    El segundo argumento es el nombre que usaremos para referirnos a él en el grafo.
-    workflow.add_node("summarizer", summarize_and_get_sentiment)
-    workflow.add_node("tweet_generator", generate_tweet)
+    workflow.add_node("summarizer", summarizer_with_llm)
+    workflow.add_node("tweet_generator", tweet_generator_with_llm)
 
     # 2. Define las aristas (las conexiones entre nodos)
     #    Esto define el flujo de control.
@@ -52,13 +57,9 @@ def build_graph():
         }
     )
 
-    # Después de generar el tweet, el flujo termina.
     workflow.add_edge("tweet_generator", END)
 
-    # 3. Compila el grafo en una aplicación ejecutable
-    #    Aquí es donde inyectamos las dependencias, como el LLM.
-    llm = get_llm()
-    return workflow.compile(checkpointer=None).with_config(configurable={"llm": llm})
+    return workflow.compile(checkpointer=None)
 
 
 def main(
