@@ -1,19 +1,20 @@
-# Welcome to MkDocs
+---
+title: Home
+hide:
+  - navigation
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Your Architectural Guide to Building Effective AI Agents
 
-## Commands
+Welcome to Principia Agentica. In the rapidly evolving ocean of AI, this is your lighthouse—a source of clarity,
+practical wisdom, and in-depth analysis dedicated to the craft of building robust, reliable, and maintainable agentic
+systems. From core principles to production-ready patterns, we're here to illuminate the path.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+---
 
-## Project layout
+## Join the Conversation
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+This research is a living project, and the most valuable insights come from community discussion. The conversation
+continues on LinkedIn. Follow for updates, share your thoughts, and let's architect the future of AI agents together.
 
-## Another Title
+[**Connect with me on LinkedIn**](https://www.linkedin.com/in/matiasquaglia/){.md-button .md-button--primary}

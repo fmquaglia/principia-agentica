@@ -2,3 +2,38 @@ site_name: Principia Agentica
 site_url: https://principia-agentica.io
 theme:
   name: material
+  logo: assets/logo_white.svg
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: pa_light
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: pa_dark
+      toggle:
+        icon: material/lightbulb
+        name: Switch to system preference
+  features:
+    - search-suggest
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.instant
+    - navigation.sections
+    - toc.integrate
+  font:
+    text: Roboto
+    code: Roboto Mono
+  language: en
+plugins:
+  - tags
+  - search
+extra:
+  generator: false
+copyright: Copyleft 2025 - Fabricio Q
+extra_css:
+  - stylesheets/extra.css

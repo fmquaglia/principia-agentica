@@ -1,0 +1,45 @@
+[data-md-color-scheme="pa_light"] {
+    /* Primary colors */
+    --md-primary-fg-color: #112D51;             /* Primary Blue as main theme color */
+    --md-primary-fg-color--light: #6D97B7;      /* Light Blue as lighter variant */
+    --md-primary-fg-color--dark: #0A1E38;       /* Darker shade of Primary Blue */
+    --md-primary-bg-color: #FFFFFF;             /* White as background for primary elements */
+    --md-primary-bg-color--light: #D3D6D7;      /* Light Gray as lighter background */
+
+    /* Accent colors */
+    --md-accent-fg-color: #C9A146;              /* Accent Gold as accent color */
+    --md-accent-fg-color--transparent: rgba(201, 161, 70, 0.1); /* Transparent Gold for subtle highlights */
+    --md-accent-bg-color: #FFFFFF;              /* White as background for accent elements */
+    --md-accent-bg-color--light: #F5F5F5;       /* Slightly off-white for accent backgrounds */
+}
+
+[data-md-color-scheme="pa_dark"] {
+    /* Dark Theme - Primary colors */
+    --md-typeset-color: #FFFFFF;
+    --md-typeset-a-color: #6D97B7;
+    --md-primary-fg-color: #112D51;             /* Primary Blue remains as main theme color */
+    --md-primary-fg-color--light: #6D97B7;      /* Light Blue as lighter variant */
+    --md-primary-fg-color--dark: #0A1E38;       /* Darker shade of Primary Blue */
+    --md-primary-bg-color: #D3D6D7;             /* Light Gray as text on dark backgrounds */
+    --md-primary-bg-color--light: #FFFFFF;      /* White for important text elements */
+
+    /* Dark Theme - Accent colors */
+    --md-accent-fg-color: #C9A146;              /* Accent Gold remains as accent color */
+    --md-accent-fg-color--transparent: rgba(201, 161, 70, 0.15); /* Slightly more visible transparent Gold */
+    --md-accent-bg-color: #0A1E38;              /* Darker Blue as main background */
+    --md-accent-bg-color--light: #112D51;       /* Primary Blue as lighter background areas */
+
+    /* Dark Theme - Additional variables */
+    --md-default-bg-color: #0A1E38;             /* Darker Blue as site background */
+    --md-default-fg-color: #D3D6D7;             /* Light Gray as main text color */
+    --md-default-fg-color--light: #FFFFFF;      /* White for headings and important text */
+    --md-code-bg-color: #112D51;                /* Primary Blue for code blocks */
+    --md-code-fg-color: #D3D6D7;                /* Light Gray for code text */
+    --md-footer-bg-color: #0A1E38;              /* Darker Blue for footer */
+    --md-footer-bg-color--dark: #081629;        /* Even darker blue for footer bottom */}
+
+/* #112D51 */
+/* #C9A146 */
+/* #6D97B7 */
+/* #D3D6D7 */
+/* #FFFFFF */
