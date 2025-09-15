@@ -3,6 +3,7 @@ site_url: https://principia-agentica.io
 theme:
   name: material
   logo: assets/logo_white.svg
+  favicon: assets/favicon.png
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
