@@ -1,5 +1,6 @@
 # justfile for Principia Agentica
 
+set dotenv-load := true
 
 # --- Variables ---
 REQUIREMENTS_FILE := "requirements.txt"
@@ -57,3 +58,16 @@ ts-install:
 # Runs the TypeScript tests
 ts-test:
     cd vercel-sdk-impl && npm test
+
+# --- Website ---
+serve:
+    @just sync
+    cd publication && mkdocs serve
+
+build:
+    @just sync
+    cd publication && mkdocs build
+
+publish:
+    @just build
+    sshpass -e scp -r publication/site/* $SSH_USER@$SITE_HOST:$SITE_PATH
