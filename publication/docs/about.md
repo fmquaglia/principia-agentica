@@ -8,19 +8,23 @@ hide:
 
 ## About Principia Agentica
 
-Building AI agents today feels like navigating a stormy sea at night. New frameworks appear like fleeting lights on the
-horizon, documentation can be as foggy as a sea mist, and the risk of running aground on a complex, unmaintainable
-architecture is very real.
+Building AI agents today can feel like navigating a stormy sea at night. 
+
+New frameworks and tools appear like a swarm of fleeting lights on the horizon, good technical documentation can be 
+evasive as a sea mist, and the risk of running aground on a complex, unmaintainable architecture is very real.
 
 **Principia Agentica was built to be a lighthouse.**
 
-This project is a dedicated space for deep, practical, and honest exploration into the architectural patterns of AI
-agents. Our mission is guided by a few core philosophies:
+This project is a space dedicated to deep, practical, and honest exploration into the architectural patterns of AI
+agents. 
 
-* **We "Sell Shovels":** In the AI gold rush, we focus on creating the best tools—the knowledge, comparisons, and
-  code—to empower the builders.
-* **We Are a Lighthouse, Not a Salesperson:** We illuminate the path by sharing knowledge generously. Authority is
-  earned through clarity and evidence.
+Our mission is guided by a few core philosophies:
+
+* **We Empower AI Builders:** Our focus is to cultivate the knowledge, make the comparisons, and develop code to 
+  empower the AI builders.
+* **Clarity Through First Principles:** We are not here to sell you a solution. We are here to build understanding from 
+  the ground up. Like a lighthouse, our purpose is to provide a fixed point of reference—grounded in evidence, 
+  architectural principles, and honest exploration—to help you navigate the complexities of AI development.
 * **We Test for the "Day 100":** We believe the true test of an architecture is not its initial elegance, but its
   long-term resilience to change.
 

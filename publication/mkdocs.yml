@@ -34,6 +34,9 @@ plugins:
   - search
 extra:
   generator: false
+  analytics:
+    provider: google
+    property: G-YS9MMJJRSJ
 copyright: Copyleft 2025 - Fabricio Q
 extra_css:
   - stylesheets/extra.css
