@@ -1,3 +1,8 @@
+/* #112D51 */
+/* #C9A146 */
+/* #6D97B7 */
+/* #D3D6D7 */
+/* #FFFFFF */
 [data-md-color-scheme="pa_light"] {
     /* Primary colors */
     --md-primary-fg-color: #112D51;             /* Primary Blue as main theme color */
@@ -38,8 +43,3 @@
     --md-footer-bg-color: #0A1E38;              /* Darker Blue for footer */
     --md-footer-bg-color--dark: #081629;        /* Even darker blue for footer bottom */}
 
-/* #112D51 */
-/* #C9A146 */
-/* #6D97B7 */
-/* #D3D6D7 */
-/* #FFFFFF */

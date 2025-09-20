@@ -429,6 +429,18 @@ wheels = [
 ]
 
 [[package]]
+name = "mkdocs-pagelist-plugin"
+version = "0.2.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "mkdocs" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a4/82/a27dc8d94fd5452f68e05eec257d30c5b473935e173423f27666d5aec9ce/mkdocs-pagelist-plugin-0.2.2.tar.gz", hash = "sha256:0ccbc18683823a13867cf820e3652afcd858418828e01c0e760b5ecaceefb169", size = 4190 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6e/46/b2ee91f9defa7bb8f547bfebc279ea917c8213a1e62256aa1417dd99eae6/mkdocs_pagelist_plugin-0.2.2-py3-none-any.whl", hash = "sha256:d2931e7c3a4d7c90e1fecdd8655094891a8407197550545e73553a39d0a16183", size = 4619 },
+]
+
+[[package]]
 name = "orjson"
 version = "3.11.3"
 source = { registry = "https://pypi.org/simple" }
@@ -544,12 +556,14 @@ source = { virtual = "." }
 dependencies = [
     { name = "langgraph" },
     { name = "mkdocs-material" },
+    { name = "mkdocs-pagelist-plugin" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "langgraph", specifier = ">=0.6.6" },
     { name = "mkdocs-material", specifier = ">=9.6.19" },
+    { name = "mkdocs-pagelist-plugin", specifier = ">=0.2.2" },
 ]
 
 [[package]]
