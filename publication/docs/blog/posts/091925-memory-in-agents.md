@@ -154,7 +154,7 @@ graph LR
 
     Merger -- " 3- Rerank & budget " --> FinalContext[Final Context for Prompt];
     FinalContext --> LLM((LLM Call));
-    style AgentDecision fill: #f9f, stroke: #333, stroke-width: 2px
+    style AgentDecision fill: #6e59d9, stroke: #333, stroke-width: 2px
 ```
 
 ```python

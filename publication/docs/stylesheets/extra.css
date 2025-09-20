@@ -38,8 +38,14 @@
     --md-default-bg-color: #0A1E38;             /* Darker Blue as site background */
     --md-default-fg-color: #D3D6D7;             /* Light Gray as main text color */
     --md-default-fg-color--light: #FFFFFF;      /* White for headings and important text */
+    --md-footer-bg-color: #0A1E38;              /* Darker Blue for footer */
+    --md-footer-bg-color--dark: #081629;        /* Even darker blue for footer bottom */
+
     --md-code-bg-color: #112D51;                /* Primary Blue for code blocks */
     --md-code-fg-color: #D3D6D7;                /* Light Gray for code text */
-    --md-footer-bg-color: #0A1E38;              /* Darker Blue for footer */
-    --md-footer-bg-color--dark: #081629;        /* Even darker blue for footer bottom */}
+    --md-code-hl-comment-color: #b69057;
+    --md-code-hl-name-color: #6D97B7;
+    --md-code-hl-operator-color: #FFFFFF;
+    --md-code-hl-punctuation-color: #FFFFFF;
+}
 
