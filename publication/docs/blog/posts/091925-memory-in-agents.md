@@ -225,45 +225,49 @@ answer = LLM(final_prompt)
 ### Real‑world examples: when to use what
 
 **Episodic memory** (auditability and replay)
-- **Use case:** A deployment agent executing a multi‑step rollout across services. Needs a reproducible event log to resume after failures and to audit who did what, when.
-- **Pattern:** Append‑only event timeline per task or session. Retrieve last N steps or window by tag to rebuild execution context deterministically.
+
+ - **Use case:** A deployment agent executing a multi‑step rollout across services. Needs a reproducible event log to resume after failures and to audit who did what, when.
+ - **Pattern:** Append‑only event timeline per task or session. Retrieve last N steps or window by tag to rebuild execution context deterministically.
 
 **Semantic memory** (recall and synthesis)
+
 - **Use case:** A research assistant answering questions across scattered specs, issues, and meeting notes. Needs similarity search to surface concepts that aren’t keyword‑matched.
 - **Pattern:** Embed distilled facts or chunks with metadata; k‑NN retrieval with filters; optional reranker before prompting.
 
 **Hybrid** (durable, human‑grade systems)
+
 - **Use case:** Customer support copilot. Pulls the last conversation turns and tool outputs (episodic) while also recalling policy and product knowledge (semantic). Merges, de‑dupes, and fits to token budget.
 - **Pattern: Dual‑retrieval + merge guardrails:** This is a bit more complex but worth exploring:
-
-**The Hybrid Pattern in detail**
-
-1. **Retrieve episodic:** window of last N events or last T minutes for the active task/session.
-2. **Retrieve semantic:** top‑k snippets filtered by domain tags, then optional reranker.
-3. **Merge:** dedupe by source and hash, enforce token budget with priority rules.
-4. **Guardrails:** provenance inlined, PII scrub at ingest, TTL for episodic, caching for stable semantic facts.
-5. **Conflict resolution:** prefer the freshest episodic facts; when conflicting with semantic policy, surface both with a short resolution note.
+- **The Hybrid Pattern in detail:**
+     1. **Retrieve episodic:** window of last N events or last T minutes for the active task/session.
+     2. **Retrieve semantic:** top‑k snippets filtered by domain tags, then optional reranker.
+     3. **Merge:** dedupe by source and hash, enforce token budget with priority rules.
+     4. **Guardrails:** provenance inlined, PII scrub at ingest, TTL for episodic, caching for stable semantic facts.
+     5. **Conflict resolution:** prefer the freshest episodic facts; when conflicting with semantic policy, surface both with a short resolution note.
 
 ```mermaid
 flowchart TD
-    A[User input / Task] --> B{1- Episodic retrieval}
+    A[User input / Task] --> B{a. Episodic retrieval}
     B -->|Last N events / T minutes| C[Recent event window]
-    A --> D{2- Semantic retrieval}
+    A --> D{b. Semantic retrieval}
     D -->|Top-k + filters + reranker?| E[Relevant knowledge snippets]
-    C --> F[3- Merge]
+    C --> F[c. Merge]
     E --> F
-    F --> F2[5- Dedupe]
+    F2[e. Conflict Resolution]
     F2 --> G{Token budget}
     G -->|Trim by priority| H[Final context]
     H --> I[LLM response]
   
     %% Guardrails
-    subgraph 4- Guardrails
+    subgraph Guardrails["d. Guardrails"]
       J[Provenance inline]
       K[PII scrub at ingest]
       L[TTL for episodic]
       M[Caching for stable facts]
     end
+    
+    Guardrails --> F2
+    F -. annotate .-> J
     F -. annotate .-> J
     E -. ingest .-> K
     C -. retention .-> L
