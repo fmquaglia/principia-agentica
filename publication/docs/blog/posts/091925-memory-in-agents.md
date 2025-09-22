@@ -16,10 +16,11 @@ pin: true
 ![Memory in Agents: Episodic vs. Semantic, and the Hybrid That Works](../../assets/images/blog/091925/agent_memory.png){align=left style="max-width: 200px; margin-right: 20px;"}
 
 Many agents fail not because of the model but due to poorly designed 'memory'. There are two main approaches: episodic memory, a reproducible chronological log; and semantic memory, distilled knowledge queryable by similarity.
+This micro-article shows minimal patterns, trade-offs, and a hybrid recipe that you can ship this week.
 
 <!-- more -->
 
-<h2 style="clear: both;"> Introduction: The Memory Problem: Why Your Agent Breaks</h2>
+<h2 style="clear: both;"> Introduction: The Memory Problem And Why Your Agent Breaks</h2>
 
 Agentic systems promise a future of autonomous, intelligent software. Yet, many promising projects stall when faced with
 a deceptively simple question:
@@ -32,18 +33,31 @@ agents.**
 
 The challenge is that "memory" isn't a single concept. For builders, it splits into two core paradigms: **episodic** and
 **semantic**. Understanding the trade-offs between them is the first step to architecting an agent that can learn,
-adapt, and perform reliably. Choosing well impacts latency, cost, privacy, and evaluation capability. This micro-article
-shows minimal patterns, trade-offs, and a hybrid recipe that you can ship this week
+adapt, and perform reliably. 
+
+Choosing well impacts latency, cost, privacy, and evaluation capability. In this article, I'll break down the two core 
+memory paradigms and give you a practical, hybrid recipe you can ship this week to build truly durable agents.
 
 ## The Two Paradigms of Agent Memory
 
 ### **Episodic Memory (The Ship's Log):**
 
-This is the agent's linear, time-stamped record of events. It's an append-only timeline of every interaction, tool call, and observation. Think of it as a court transcript or a ship's log. Writes are cheap and fast, and retrieval is deterministic, based on time or task ID. This makes it perfect for auditability, debugging, and reproducing specific task flows. For governance, redacting specific events or applying time-to-live (TTL) policies is straightforward.
+This is the agent's linear, time-stamped record of events. It's an append-only timeline of every interaction, tool call, 
+and observation. Think of it as a court transcript or a ship's log. Writes are cheap and fast, and retrieval is 
+deterministic, based on time or task ID. 
+
+This makes it perfect for auditability, debugging, and reproducing specific task flows. For governance, redacting 
+specific events or applying time-to-live (TTL) policies is straightforward.
 
 ### **Semantic Memory (The Knowledge Library):**
 
-This is the agent's conceptual, associative knowledge base. It works by converting information into numerical representations (embeddings) and storing them in a vector database for flexible retrieval. Think of it as a library's card catalog or a personal knowledge graph. Writes are more computationally expensive, but retrieval is incredibly powerful, allowing the agent to find information based on conceptual similarity, not just exact keywords. This is the foundation for robust RAG (Retrieval-Augmented Generation) and allows for generalization and creative synthesis.
+This is the agent's conceptual, associative knowledge base. It works by converting information into numerical 
+representations (embeddings) and storing them in a vector database for flexible retrieval. Think of it as a library's 
+card catalog or a personal knowledge graph. Writes are more computationally expensive, but retrieval is incredibly 
+powerful, allowing the agent to find information based on conceptual similarity, not just exact keywords. 
+
+This is the foundation for robust RAG (Retrieval-Augmented Generation) and allows for generalization and creative 
+synthesis.
 
 ## Minimal Implementation Patterns
 
@@ -74,15 +88,14 @@ sequenceDiagram
     participant EpisodicStore as "Episodic Memory<br>(Timeline Store)"
 
     loop For Each Step in Task
-        Agent ->> EpisodicStore: log_event(timestamp, event_details)
+        Agent->>EpisodicStore: log_event(task_id, timestamp, event_details)
         Note right of Agent: Writes the current event to the log.
-        Agent ->> EpisodicStore: fetch_events(last_n_steps=5)
-        EpisodicStore -->> Agent: Returns [Event-5, Event-4, Event-3, Event-2, Event-1]
+        Agent->>EpisodicStore: fetch_events(task_id, last_n_steps=5)
+        EpisodicStore-->>Agent: Returns [Event-5, Event-4, Event-3, Event-2, Event-1]
         Note right of Agent: Retrieves the recent and sequential history.
-        Agent ->> Agent: build_prompt_with_history(current_task, history)
+        Agent->>Agent: build_prompt_with_history(current_task, event_window)
         Note right of Agent: Builds the prompt with linear context.
     end
-
 ```
 
 ### **Semantic Memory (RAG over facts):**
@@ -236,9 +249,8 @@ answer = LLM(final_prompt)
 
 **Hybrid** (durable, human‑grade systems)
 
-- **Use case:** Customer support copilot. Pulls the last conversation turns and tool outputs (episodic) while also recalling policy and product knowledge (semantic). Merges, de‑dupes, and fits to token budget.
-- **Pattern: Dual‑retrieval + merge guardrails:** This is a bit more complex but worth exploring:
-- **The Hybrid Pattern in detail:**
+- **Use case:** A customer support copilot. Pulls the last conversation turns and tool outputs (episodic) while also recalling policy and product knowledge (semantic). Merges, de‑dupes, and fits to token budget.
+- **Pattern:** Dual‑retrieval + merge guardrails. This is a bit more complex but worth exploring in more depth.
      1. **Retrieve episodic:** window of last N events or last T minutes for the active task/session.
      2. **Retrieve semantic:** top‑k snippets filtered by domain tags, then optional reranker.
      3. **Merge:** dedupe by source and hash, enforce token budget with priority rules.
@@ -356,6 +368,8 @@ This theoretical trade-off is just the beginning. In my upcoming full benchmark 
 
 **We'll measure the real-world impact on latency, cost-per-call ($/call), and retrieval quality for workloads like task replay, Q&A over notes, and tool grounding.**
 
-Stay tuned. The lab is open.
+Stay tuned. The lab is open. 
 
-*(You can follow the progress at the [principia-agentica GitHub repository](https://github.com/fmquaglia/principia-agentica).)*
+_You can follow the progress at the [principia-agentica GitHub repository](https://github.com/fmquaglia/principia-agentica)._ 
+
+_...and if you found this helpful, share it with anyone designing agent memory. **Thank you!**_
