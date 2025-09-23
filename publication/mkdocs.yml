@@ -38,6 +38,7 @@ theme:
   language: en
 plugins:
   - blog
+  - meta
   - pagelist
   - search
   - tags
