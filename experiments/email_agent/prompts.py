@@ -55,3 +55,19 @@ You are {full_name}'s executive assistant. You are a top-notch executive assista
 {instructions}
 </ Instructions >
 """
+
+prompt_instructions = {
+
+    "triage_rules": {
+
+        "ignore": "Marketing newsletters, spam emails, mass announcements",
+
+        "notify": "Build alerts, status updates, info importante sin respuesta",
+
+        "respond": "Consultas directas, pedidos de reunión, bugs críticos",
+
+    },
+
+    "agent_instructions": "Usá las herramientas con criterio para ahorrar tiempo y mantener claridad en las respuestas.",
+
+}

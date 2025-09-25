@@ -8,7 +8,7 @@ def parse_args():
     ap.add_argument("--to", required=True)
     ap.add_argument("--subject", required=True)
     ap.add_argument("--body", required=True)
-    ap.add_argument("--model", default=os.getenv("MODEL", "openai:gpt-4o"))
+    ap.add_argument("--model", default=os.getenv("MODEL", "google_genai:gemini-2.5-pro"))
     return ap.parse_args()
 
 def main():
@@ -23,7 +23,7 @@ def main():
         "subject": args.subject,
         "email_thread": args.body,
     }
-    resp = graph.invoke({"email_input": email_input})
+    _ = graph.invoke({"email_input": email_input})
     print("✅ done")
 
 if __name__ == "__main__":
