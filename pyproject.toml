@@ -7,7 +7,9 @@ requires-python = ">=3.12"
 dependencies = [
     "langchain>=0.3.27",
     "langchain-google-genai>=2.1.12",
+    "langchain-google-vertexai>=2.1.2",
     "langgraph>=0.6.6",
+    "langmem>=0.0.29",
     "mkdocs-material>=9.6.19",
     "mkdocs-pagelist-plugin>=0.2.2",
     "python-dotenv>=1.1.1",

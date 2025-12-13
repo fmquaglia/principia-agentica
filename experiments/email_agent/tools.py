@@ -1,4 +1,5 @@
 from langchain_core.tools import tool
+from langmem import create_manage_memory_tool, create_search_memory_tool
 
 @tool
 def write_email(to: str, subject: str, content: str) -> str:
@@ -23,5 +24,27 @@ def check_calendar_availability(day: str) -> str:
     print(response)
     return response
 
+manage_memory_tool = create_manage_memory_tool(
+    namespace=(
+        "email_agent",
+        "{langgraph_user_id}",
+        "collection"
+    )
+)
+
+search_memory_tool = create_search_memory_tool(
+    namespace=(
+        "email_agent",
+        "{langgraph_user_id}",
+        "collection"
+    )
+)
+
 def tools():
-    return [write_email, schedule_meeting, check_calendar_availability]
+    return [
+        write_email,
+        schedule_meeting,
+        check_calendar_availability,
+        manage_memory_tool,
+        search_memory_tool
+    ]

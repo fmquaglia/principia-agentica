@@ -2,12 +2,20 @@
 #    uv pip compile pyproject.toml -o requirements.txt
 annotated-types==0.7.0
     # via pydantic
+anthropic==0.68.1
+    # via langchain-anthropic
 anyio==4.10.0
-    # via httpx
+    # via
+    #   anthropic
+    #   google-genai
+    #   httpx
+    #   openai
 babel==2.17.0
     # via mkdocs-material
 backrefs==5.9
     # via mkdocs-material
+bottleneck==1.6.0
+    # via langchain-google-vertexai
 cachetools==5.5.2
     # via google-auth
 certifi==2025.8.3
@@ -23,6 +31,16 @@ click==8.2.1
     #   mkdocs-material
 colorama==0.4.6
     # via mkdocs-material
+distro==1.9.0
+    # via
+    #   anthropic
+    #   openai
+docstring-parser==0.17.0
+    # via
+    #   anthropic
+    #   google-cloud-aiplatform
+dydantic==0.0.8
+    # via trustcall
 filetype==1.2.0
     # via langchain-google-genai
 ghp-import==2.1.0
@@ -30,20 +48,61 @@ ghp-import==2.1.0
 google-ai-generativelanguage==0.7.0
     # via langchain-google-genai
 google-api-core==2.25.1
-    # via google-ai-generativelanguage
+    # via
+    #   google-ai-generativelanguage
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery
+    #   google-cloud-core
+    #   google-cloud-resource-manager
+    #   google-cloud-storage
 google-auth==2.40.3
     # via
     #   google-ai-generativelanguage
     #   google-api-core
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery
+    #   google-cloud-core
+    #   google-cloud-resource-manager
+    #   google-cloud-storage
+    #   google-genai
+google-cloud-aiplatform==1.117.0
+    # via langchain-google-vertexai
+google-cloud-bigquery==3.38.0
+    # via google-cloud-aiplatform
+google-cloud-core==2.4.3
+    # via
+    #   google-cloud-bigquery
+    #   google-cloud-storage
+google-cloud-resource-manager==1.14.2
+    # via google-cloud-aiplatform
+google-cloud-storage==2.19.0
+    # via
+    #   google-cloud-aiplatform
+    #   langchain-google-vertexai
+google-crc32c==1.7.1
+    # via
+    #   google-cloud-storage
+    #   google-resumable-media
+google-genai==1.39.1
+    # via google-cloud-aiplatform
+google-resumable-media==2.7.2
+    # via
+    #   google-cloud-bigquery
+    #   google-cloud-storage
 googleapis-common-protos==1.70.0
     # via
     #   google-api-core
+    #   grpc-google-iam-v1
     #   grpcio-status
 greenlet==3.2.4
     # via sqlalchemy
+grpc-google-iam-v1==0.14.2
+    # via google-cloud-resource-manager
 grpcio==1.75.0
     # via
     #   google-api-core
+    #   googleapis-common-protos
+    #   grpc-google-iam-v1
     #   grpcio-status
 grpcio-status==1.75.0
     # via google-api-core
@@ -53,8 +112,14 @@ httpcore==1.0.9
     # via httpx
 httpx==0.28.1
     # via
+    #   anthropic
+    #   google-genai
+    #   langchain-google-vertexai
     #   langgraph-sdk
     #   langsmith
+    #   openai
+httpx-sse==0.4.1
+    # via langchain-google-vertexai
 idna==3.10
     # via
     #   anyio
@@ -64,38 +129,63 @@ jinja2==3.1.6
     # via
     #   mkdocs
     #   mkdocs-material
+jiter==0.11.0
+    # via
+    #   anthropic
+    #   openai
 jsonpatch==1.33
-    # via langchain-core
+    # via
+    #   langchain-core
+    #   trustcall
 jsonpointer==3.0.0
     # via jsonpatch
 langchain==0.3.27
-    # via principia-agentica (pyproject.toml)
-langchain-core==0.3.75
+    # via
+    #   principia-agentica (pyproject.toml)
+    #   langmem
+langchain-anthropic==0.3.19
+    # via langmem
+langchain-core==0.3.76
     # via
     #   langchain
+    #   langchain-anthropic
     #   langchain-google-genai
+    #   langchain-google-vertexai
+    #   langchain-openai
     #   langchain-text-splitters
     #   langgraph
     #   langgraph-checkpoint
     #   langgraph-prebuilt
+    #   langmem
 langchain-google-genai==2.1.12
     # via principia-agentica (pyproject.toml)
+langchain-google-vertexai==2.1.2
+    # via principia-agentica (pyproject.toml)
+langchain-openai==0.3.32
+    # via langmem
 langchain-text-splitters==0.3.11
     # via langchain
 langgraph==0.6.6
-    # via principia-agentica (pyproject.toml)
+    # via
+    #   principia-agentica (pyproject.toml)
+    #   langmem
+    #   trustcall
 langgraph-checkpoint==2.1.1
     # via
     #   langgraph
     #   langgraph-prebuilt
+    #   langmem
 langgraph-prebuilt==0.6.4
     # via langgraph
 langgraph-sdk==0.2.4
     # via langgraph
+langmem==0.0.29
+    # via principia-agentica (pyproject.toml)
 langsmith==0.4.21
     # via
     #   langchain
     #   langchain-core
+    #   langmem
 markdown==3.9
     # via
     #   mkdocs
@@ -121,6 +211,15 @@ mkdocs-material-extensions==1.3.1
     # via mkdocs-material
 mkdocs-pagelist-plugin==0.2.2
     # via principia-agentica (pyproject.toml)
+numexpr==2.13.0
+    # via langchain-google-vertexai
+numpy==2.3.3
+    # via
+    #   bottleneck
+    #   numexpr
+    #   shapely
+openai==1.109.1
+    # via langchain-openai
 orjson==3.11.3
     # via
     #   langgraph-sdk
@@ -129,6 +228,8 @@ ormsgpack==1.10.0
     # via langgraph-checkpoint
 packaging==25.0
     # via
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery
     #   langchain-core
     #   langsmith
     #   mkdocs
@@ -142,13 +243,20 @@ proto-plus==1.26.1
     # via
     #   google-ai-generativelanguage
     #   google-api-core
+    #   google-cloud-aiplatform
+    #   google-cloud-resource-manager
 protobuf==6.32.1
     # via
     #   google-ai-generativelanguage
     #   google-api-core
+    #   google-cloud-aiplatform
+    #   google-cloud-resource-manager
     #   googleapis-common-protos
+    #   grpc-google-iam-v1
     #   grpcio-status
     #   proto-plus
+pyarrow==21.0.0
+    # via langchain-google-vertexai
 pyasn1==0.6.1
     # via
     #   pyasn1-modules
@@ -157,11 +265,18 @@ pyasn1-modules==0.4.2
     # via google-auth
 pydantic==2.11.7
     # via
+    #   anthropic
+    #   dydantic
+    #   google-cloud-aiplatform
+    #   google-genai
     #   langchain
+    #   langchain-anthropic
     #   langchain-core
     #   langchain-google-genai
+    #   langchain-google-vertexai
     #   langgraph
     #   langsmith
+    #   openai
 pydantic-core==2.33.2
     # via pydantic
 pygments==2.19.2
@@ -169,7 +284,9 @@ pygments==2.19.2
 pymdown-extensions==10.16.1
     # via mkdocs-material
 python-dateutil==2.9.0.post0
-    # via ghp-import
+    # via
+    #   ghp-import
+    #   google-cloud-bigquery
 python-dotenv==1.1.1
     # via principia-agentica (pyproject.toml)
 pyyaml==6.0.2
@@ -182,30 +299,53 @@ pyyaml==6.0.2
     #   pyyaml-env-tag
 pyyaml-env-tag==1.1
     # via mkdocs
+regex==2025.9.18
+    # via tiktoken
 requests==2.32.5
     # via
     #   google-api-core
+    #   google-cloud-bigquery
+    #   google-cloud-storage
+    #   google-genai
     #   langchain
     #   langsmith
     #   mkdocs-material
     #   requests-toolbelt
+    #   tiktoken
 requests-toolbelt==1.0.0
     # via langsmith
 rsa==4.9.1
     # via google-auth
+shapely==2.1.2
+    # via google-cloud-aiplatform
 six==1.17.0
     # via python-dateutil
 sniffio==1.3.1
-    # via anyio
+    # via
+    #   anthropic
+    #   anyio
+    #   openai
 sqlalchemy==2.0.43
     # via langchain
 tenacity==9.1.2
-    # via langchain-core
+    # via
+    #   google-genai
+    #   langchain-core
+tiktoken==0.11.0
+    # via langchain-openai
+tqdm==4.67.1
+    # via openai
+trustcall==0.0.39
+    # via langmem
 typing-extensions==4.15.0
     # via
+    #   anthropic
     #   anyio
+    #   google-cloud-aiplatform
+    #   google-genai
     #   grpcio
     #   langchain-core
+    #   openai
     #   pydantic
     #   pydantic-core
     #   sqlalchemy
@@ -214,8 +354,12 @@ typing-inspection==0.4.1
     # via pydantic
 urllib3==2.5.0
     # via requests
+validators==0.35.0
+    # via langchain-google-vertexai
 watchdog==6.0.0
     # via mkdocs
+websockets==15.0.1
+    # via google-genai
 xxhash==3.5.0
     # via langgraph
 zstandard==0.24.0

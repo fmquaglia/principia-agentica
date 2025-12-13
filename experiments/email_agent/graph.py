@@ -5,6 +5,7 @@ from langgraph.types import Command
 from typing import Literal
 from .triage import build_triage_messages, run_triage
 from .agent import build_agent, create_prompt_factory
+from .memory import store
 
 class State(TypedDict):
     email_input: dict
@@ -31,7 +32,7 @@ def build_email_agent(profile: dict, prompt_instructions: dict, toolset: list, h
 
     g = StateGraph(State)
     g = g.add_node("triage_router", triage_router)
-    agent = build_agent(model, toolset, create_prompt_factory(profile, prompt_instructions))
+    agent = build_agent(model, toolset, create_prompt_factory(profile, prompt_instructions), store)
     g = g.add_node("response_agent", agent)
     g = g.add_edge(START, "triage_router")
     return g.compile()

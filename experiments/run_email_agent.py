@@ -9,6 +9,7 @@ def parse_args():
     ap.add_argument("--subject", required=True)
     ap.add_argument("--body", required=True)
     ap.add_argument("--model", default=os.getenv("MODEL", "google_genai:gemini-2.5-pro"))
+    ap.add_argument("--user_id", default="fabricio")
     return ap.parse_args()
 
 def main():
@@ -23,7 +24,14 @@ def main():
         "subject": args.subject,
         "email_thread": args.body,
     }
-    _ = graph.invoke({"email_input": email_input})
+    _ = graph.invoke(
+        {"email_input": email_input},
+        config={
+            "configurable": {
+                "langgraph_user_id": args.user_id
+            }
+        }
+    )
     print("✅ done")
 
 if __name__ == "__main__":
