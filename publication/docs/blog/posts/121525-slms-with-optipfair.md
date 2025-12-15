@@ -147,8 +147,8 @@ The `principia-agentica` laboratory approves and recommends **OptiPFair**.
 **I want to use OptiPFair. Where do I start?**
 
 - **Official OptiPFair repository:** [github.com/peremartra/optipfair](http://github.com/peremartra/optipfair)
-- **Pere's complete LLM course (free):** An educational treasure that covers from fundamentals to advanced techniques. Highly recommended. https://github.com/peremartra/Large-Language-Model-Notebooks-Course
-- **"Large Language Models" book (Apress, 2024):** Pere's definitive guide on LLMs, now available. https://link.springer.com/book/10.1007/979-8-8688-0515-8
+- **Pere's complete LLM course (free):** An educational treasure that covers from fundamentals to advanced techniques. Highly recommended. [https://github.com/peremartra/Large-Language-Model-Notebooks-Course](https://github.com/peremartra/Large-Language-Model-Notebooks-Course)
+- **"Large Language Models Projects" book (Apress, 2024):** Pere's definitive guide on LLMs, now available. [https://link.springer.com/book/10.1007/979-8-8688-0515-8](https://link.springer.com/book/10.1007/979-8-8688-0515-8)
 - **Upcoming book with Manning:** Pere is working on a book about model architecture and optimization that will delve deeper into OptiPFair and related techniques. Stay tuned.
 
 ## **Connect with Pere Martra:**
