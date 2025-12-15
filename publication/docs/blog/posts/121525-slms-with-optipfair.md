@@ -23,6 +23,8 @@ From depth vs. width pruning to surgical bias removal, this architect-to-archite
 
 <!-- more -->
 
+<br clear="all">
+
 ## Introduction: When "Bigger" Stopped Being "Better"
 
 We live in the age of giants—and perhaps we're witnessing their fall?
