@@ -45,8 +45,3 @@ You can follow my work and connect with me here:
 
 * **LinkedIn:** [linkedin.com/in/matiasquaglia/](https://www.linkedin.com/in/matiasquaglia/)
 * **GitHub:** [github.com/fmquaglia](https://github.com/fmquaglia)
-
-<!-- 
-Don't forget to add your awesome caricature here! 
-![Fabricio's Avatar](path/to/your/image.png) 
--->

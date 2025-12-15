@@ -29,7 +29,6 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
-    - navigation.instant
     - navigation.sections
     - toc.integrate
   font:
@@ -39,6 +38,23 @@ theme:
 plugins:
   - blog
   - meta
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: es
+          name: Español
+          build: true
+          nav:
+            - Inicio:
+              - index.md
+            - about.md
+            - Biblioteca:
+                - blog/index.md
+            - contact.md
   - pagelist
   - search
   - tags
