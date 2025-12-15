@@ -17,12 +17,9 @@ pin: true
 
 ![Memory in Agents: Episodic vs. Semantic, and the Hybrid That Works](../../assets/images/blog/121525/pruned.jpeg){align=left style="max-width: 200px; margin-right: 20px;"}
 
-The AI race has been defined by a brutal metric: parameter count. 
-But for those of us building real-world systems, the equation has changed. 
-We've entered the era of efficiency. 
-In this first episode of the OptiPFair Series, I sit down with Pere Martra—engineer, educator, and creator of OptiPFair to dissect not just his tool, but the philosophy behind it. 
-From depth vs. width pruning benchmarks to surgical bias removal, this is an architect-to-architect conversation about building the next generation of Small Language Models. 
-The future doesn't belong to giants. It belongs to specialists: small, fast, and fair.
+The AI race has prioritized parameter count, but for real-world systems, the equation has changed.
+We've entered the efficiency era. In this first OptiPFair Series episode, I speak with Pere Martra—engineer, educator, and OptiPFair creator—to dissect his tool and its philosophy.
+From depth vs. width pruning to surgical bias removal, this architect-to-architect conversation explores building the next generation of Small Language Models. The future belongs to specialists: small, fast, and fair.
 
 <!-- more -->
 
@@ -87,10 +84,11 @@ Using a `Llama-3.2-1B` model as baseline, I ran two strategies:
 
 **The Laboratory Verdict:** The results validated Pere's thesis. While width pruning maintained the global structure more faithfully, **depth pruning delivered a significantly larger performance gain**: a 15.6% improvement in Tokens Per Second (TPS) compared to width pruning's 4.3%, with controllable quality degradation.
 
-!!! example "Create new scratch file from selection"
+!!! example "Reproduce these results experimentally"
     
     All benchmarks are documented in an interactive Jupyter notebook. 
-    [Open in Colab](LINK) | [View on GitHub](LINK)
+    
+    [Open in Colab](https://colab.research.google.com/github/fmquaglia/principia-agentica/blob/master/articles/091925-memory-in-agents/optipfair_series_1.ipynb) | [View on GitHub](https://github.com/fmquaglia/principia-agentica/blob/master/articles/091925-memory-in-agents/optipfair_series_1.ipynb)
 
 ## **Visualizing the Invisible: Bias**
 
@@ -154,16 +152,16 @@ The `principia-agentica` laboratory approves and recommends **OptiPFair**.
 ## **Connect with Pere Martra:**
 
 - **LinkedIn:** Follow his updates on OptiPFair, SLMs, and the future of efficient AI
-  - https://www.linkedin.com/in/pere-martra/
+    - [https://www.linkedin.com/in/pere-martra/](https://www.linkedin.com/in/pere-martra/)
 - **Hugging Face:** Explore his optimized models and experiments with SLMs
-  - https://huggingface.co/oopere
+    - [https://huggingface.co/oopere](https://huggingface.co/oopere)
 - **Medium:** Read his articles on model optimization and advanced ML techniques
-  - https://medium.com/@peremartra
-- **Community:** Pere is an active mentor at [DeepLearning.AI](http://DeepLearning.AI) and regularly contributes to TowardsAI
+    - [https://medium.com/@peremartra](https://medium.com/@peremartra)
+- **Community:** Pere is an active mentor at [DeepLearning.AI](https://community.deeplearning.ai/u/pere_martra/summary) and regularly contributes to [TowardsAI](https://towardsai.net/?s=pere%20martra)
 
 **If you found this article useful:**
 
-- Try OptiPFair in your next optimization project
+- [Try OptiPFair](https://peremartra.github.io/optipfair/) in your next optimization project
 - Share this analysis with your ML team
 - Consider supporting Pere's open source work by giving it a star on GitHub
 - Follow Principia Agentica's work for more in-depth architectural analyses

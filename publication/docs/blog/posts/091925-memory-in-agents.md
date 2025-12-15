@@ -9,7 +9,7 @@ author: Fabricio Q
 excerpt: Practical patterns and trade-offs to help your agent remember well from day 1
 description: "How to design long‑term memory for agents: episodic vs. semantic, the hybrid pattern, diagrams, and copy‑ready schemas."
 published: true
-pin: true
+pin: false
 ---
 
 # Memory in Agents: Episodic vs. Semantic, and the Hybrid That Works

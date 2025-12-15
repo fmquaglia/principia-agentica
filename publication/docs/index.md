@@ -22,9 +22,12 @@ continues on LinkedIn. Follow for updates, share your thoughts, and let's archit
 
 [**Connect with me on LinkedIn**](https://www.linkedin.com/in/matiasquaglia/){.md-button .md-button--primary}
 </div>
+
 <div id="featured" markdown>
 ## Latest from the Lab
-{pagelist 5 featured}
+
+- [The OptiPFair Series #1: Forging the Future with Small Models — An Architectural Analysis with Pere Martra](blog/posts/121525-slms-with-optipfair.md)
+- [Memory in Agents: Episodic vs. Semantic, and the Hybrid That Works](blog/posts/091925-memory-in-agents.md)
 </div>
 
 </div>
