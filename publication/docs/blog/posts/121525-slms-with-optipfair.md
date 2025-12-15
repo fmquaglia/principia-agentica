@@ -15,7 +15,7 @@ pin: true
 
 # The OptiPFair Series #1: Forging the Future with Small Models — An Architectural Analysis with Pere Martra
 
-![Memory in Agents: Episodic vs. Semantic, and the Hybrid That Works](../../assets/images/blog/121525/pruned.jpeg){align=left style="max-width: 200px; margin-right: 20px;"}
+![When "bigger" stopped being better: A deep dive into OptiPFair with its creator, Pere Martra](../../assets/images/blog/121525/pruned.jpeg){align=left style="max-width: 200px; margin-right: 20px;"}
 
 The AI race has prioritized parameter count, but for real-world systems, the equation has changed.
 We've entered the efficiency era. In this first OptiPFair Series episode, I speak with Pere Martra—engineer, educator, and OptiPFair creator—to dissect his tool and its philosophy.
