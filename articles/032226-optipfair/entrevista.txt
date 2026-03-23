@@ -1,0 +1,165 @@
+# Pere <> Fabricio
+
+  Meeting started: 10/23/2025, 10:27:53 AM
+  Duration: 34 minutes
+  Participants: Fabricio Q, Pere Martra
+
+  [View original transcript](https://app.tactiq.io/api/2/u/m/r/V0a2tjlSBlSTJ1TkJRu3?o=txt)
+
+    
+
+  
+
+  
+    ## Highlights
+
+    > 00:49 Fabricio Q: No, no, no habíamos no habíamos hablado nunca habíamos interactuado por LinkedIn un par de veces y por por github de en pool request y demás y creo que
+
+  ## Transcript
+
+  00:00 Fabricio Q: Hola, cómo estás?
+00:01 Pere Martra: Hola Fabricio bien, buenas a ver un momento que me aclare con la herramienta esta. No sé qué me dice, no, no quiero speeds, vale? Ok.
+00:16 Fabricio Q: La sobre oferta no estamos sufriendo la sobre oferta de herramientas en este momento te meten una llamada y te te aparecen casi como banners. eres traducción que
+00:28 Pere Martra: Sí, sí sí.
+00:30 Fabricio Q: Espere, muchas gracias por tomarte el tiempo, la verdad que me parece casi increíble estarte viendo cara a cara digo, he visto tu avatar tantas veces estando en tu repositorio que me parece una locura estar hablando contigo directamente te agradezco.
+00:47 Pere Martra: Es verdad, no nos conocíamos, no Fabricio solo nos hemos ido.
+00:49 Fabricio Q: No, no, no habíamos no habíamos hablado nunca habíamos interactuado por LinkedIn un par de veces y por por github de en pool request y demás y creo que
+00:58 Pere Martra: Sí, me acuerdo.
+01:00 Fabricio Q: un poco en algún, o sea, no, yo llegué a conocerte en el foro de Deep learning ahí.
+01:07 Pere Martra: Ah, es verdad, sí.
+01:07 Fabricio Q: Tú estabas hablando de tu de tu repo cuando recién estaba arrancando agregando contenido. Y yo justo terminaba la especialización de procesamiento de lenguaje, entonces
+01:18 Pere Martra: sí
+01:22 Fabricio Q: me vino como anillo al dedo porque dije bueno, acá tengo para para seguir estudiando para seguir aprendiendo.
+01:29 Pere Martra: Perfecto, perfecto, pues me alegro que está bien. Bueno Fabricio vamos a ver.
+01:35 Fabricio Q: Me dejarías grabar la llamada así yo después puedo declavarlo no es para para
+01:37 Pere Martra: sí
+01:40 Fabricio Q: poner la grabación tal cual sino después yo para poder transcribir el el audio.
+01:46 Pere Martra: Sí, hay ningún problema.
+01:47 Fabricio Q: Dale entonces dame un minutito. Voy a prender la grabación. Por acá. Y estamos bueno, como como te decía Pérez muchas gracias por por el tiempo por
+02:07 Pere Martra: Vale.
+02:08 Fabricio Q: por el por el por el tiempo de la llamada y aparte por el tiempo de las respuestas quedaron las preguntas de más alto nivel que es más para disparar una conversación que para que las respuestas tal cual. yo creo muy bueno, que que alguien comparta con Open Source que que que publica en su trabajo para que todo el mundo lo use y y tú has sido muy influencial en el en el en la comunidad de de de de de ella y en la comunidad de de procesamiento de lenguaje en la comunidad de la gente que está aprendiendo el LM basta con ver la cantidad de estrellas de tu de tu repo para para darte cuenta lo lo influencial que sos y ha sido muy importante para mucha gente en cuanto a educación y creo que optipi Fair No, no, es que es que es muy real, yo he hablado con otros miembros de la comunidad y piensan igual que yo este realmente ha sido muy bueno tu lo que has contribuido con la educación.
+03:12 Pere Martra: Me ha encantado, gracias.
+03:13 Fabricio Q: Yo creo que optipi Fair va a ser lo mismo va a ser muy muy influencial para la gente que quiera aprender a optimizar modelos de lenguaje.
+03:22 Pere Martra: Vale.
+03:23 Fabricio Q: Y lo que me interesaría es que me cuentes es como en tu opinión. Cómo cómo va a complementar optipi fer con con tu con tu trabajo educativo, o sea, como como lo es.
+03:38 Pere Martra: La verdad es que es un universo que está todo un poco ligado, vale? Sabes que hace poco he empezado un repositorio nuevo que se llama real arquitectings. Bien, esto es porque te tengo firmado un libro con Manning que va a salir en unos meses, van a salir los los primeros capítulos y este libro trata
+04:00 Fabricio Q: excelente
+04:02 Pere Martra: justamente sobre cómo optimizar modelos como crear un un pipeline que te va desde pues tengo un modelo y lo voy a transformar para adaptarlo a mis necesidades a mis datos y a mis funcionalidades, vale? No, no tan solo el cojo este SLM y lo utilizo, si vamos a estamos hablando de modelos especialistas. Pues vamos a hacer un modelo que funcione bien con mis datos médicos o con mis datos legales.
+04:34 Pere Martra: Y no solo con los datos, sino oye, yo estos datos que tengo que hacer tengo que hacer un subrayes, tengo que interpretarlos o tengo que sacar una contusión, pues también un modelo que sea esté dirigido para la tarea específica. De eso y es un es la librería que va a encapsular todo el código que se enseñe. Vale, ahora.
+04:59 Fabricio Q: O sea, que optipi Fer va a ser como la herramienta que va que va a servir como de driver, para para aprender todo lo que enseñas en tu futuro libro.
+05:10 Pere Martra: Exacto, yo voy a enseñar el el código base, vale? Es decir cuando estamos hablando de seleccionar neuronas dentro de una estructura Glu voy a enseñar, cómo puedo ir a esta capa como analizo el peso de la neurona como miro las activaciones y después todo este código se encapsula dentro del y una vez ella el lector lo ha comprendido, cómo se hace tiene una herramienta que puedo usarla y que podemos modificarla porque eso pensó también.
+05:41 Pere Martra: Puede contribuir a ella y un poquito es esto lo que lo que lo que voy buscando ahora es está muy muy empezando, eh? Pienso que le queda mucha mucha ruta ahora mismo estaba trabajando. en hacer, sabes que tiene la capacidad de with Bruning que te mira por el peso de las neuronas y funciona con modelos modernos con los que tienen las letras Glu pues incorporar un análisis más que tenga en cuenta que en una de las capas nuevas ahí tenga en cuenta los datos que vas a usar con él no tan solo por la forma estática del modelo, sino que te te analiza cuál es la importancia de
+06:24 Fabricio Q: Cómo funciona con un data set en particular el modelo y y y qué tanto funciona cada capa cada neurona increíble.
+06:30 Pere Martra: Sí, claro, esto lo hemos solucionado con el disco. Ya lo saqué la semana pasada o algo así más o hace dos, no me acuerdo y ahora con el que es en lo que estoy. Trabajando, vale? Porque está pensado que son librería que te cumpla todo el flujo cojo el modelo lo recorto.
+06:53 Fabricio Q: una caja de herramientas completa como una suite de herramientas completa para
+06:55 Pere Martra: exacto exacto el que en un principio sea esto, pero que al mismo hacemos una
+06:56 Fabricio Q: optimización de modelos
+07:02 Pere Martra: librería cerrada que puedas usar y ya está eso que el conocimiento de cómo se ha implementado esta librería este en parte en el repositorio y en parte mucho mejor explicada en el libro en el libro con
+07:15 Fabricio Q: me autorizas a que mencione en el artículo el futuro libro que vas a publicar quizás también te sirva como
+07:21 Pere Martra: Sí, sí.
+07:22 Fabricio Q: como publicidad previa
+07:23 Pere Martra: Será la primera vez que sale, pero al contrato ya está firmado. Ya ha entregado los tres primeros o cuatro primeros capítulos están en revisión esta gente de Manny es mucho más seria que la de la prensa.
+07:35 Fabricio Q: y sí, sí, sí me da yo he consumido de las dos editoriales y el producto final que a uno le llega como lector es otra cosa aprendes los libros son
+07:43 Pere Martra: sí
+07:45 Fabricio Q: Muy desparejo tener muy buenos libros, pero tener libros que son más bien flojo, entonces me dan la impresión que no hacen como de contenido.
+07:52 Pere Martra: No, era Press te dejan muy solo, eh? Yo hice revisiones de mi libro yo yo solo muchas veces tenía un reversor técnico también. pero no tiene, no es lo mismo, no es lo mismo aquí hay todo un equipo dedicado y cada tres capítulos o cada cuánto se los envían a cinco revisores externos que son especialistas en el campo y se los miran el revisor técnico que tengo
+08:13 Fabricio Q: claro
+08:17 Pere Martra: ahora es un track estupendo es una persona que ha sacado también un par de libros con
+08:25 Fabricio Q: Como que están más a tu altura, me parece.
+08:26 Pere Martra: ellos No, no, es que sean detrás, sino que se nota que es una editorial que quiere sacar un producto un producto muy bueno y que al mismo tiempo se acceden sacar cosas que son un poco más este top dear un poco un poco menos establecidas, vale? Que no no buscan tanto el plan público no es un libro de fine tuning, que sería lo fácil o un libro de adaptar un modelo a dominio base, pues Lora y
+08:48 Fabricio Q: claro
+08:54 Pere Martra: todo eso no es un libro muy específico que va a hablar también de atención
+08:54 Fabricio Q: claro
+09:00 Pere Martra: bypass, que es una cosa que irá en la librería. De cómo crear modelos adaptativos también que es algo que era en la librería, o sea, yo lo que estoy haciendo ahora en este proyecto nuevo es muchas cosas que están en papers. y que son Aterrizarlas hacia lo que es el lado en ingeniería. Y decir implementar cosas que te explican.
+09:26 Fabricio Q: Facilitarle un poco al ingeniero de machine learning que pueda acceder a esas cosas que por ahora son teóricas y muy muy nuevas.
+09:36 Pere Martra: Que tú te puedas crear un modelo de 7 billones de parámetros que no es una locura y que este modelo decidas que el 50% de las capas. De atención no se van a ejecutar y tengas la herramienta para hacerlo y los conocimientos de saber cuándo tienes que hacerlo un poquito es esto. Porque ya sabes que habrá casi todos está haciendo con con APIs ya lo llamo. Yo estoy casi convencido que quizás estoy equivocado, pero yo creo que esto va a cambiar. Poco a poco iremos más hacia.
+10:13 Fabricio Q: Se está hablando más y más de modelos de pequeño tamaño tanto de texto de de imagen de audio que pueden correr en dispositivos de capacidad muy limitada y como de machine learning un poco ubicuo repartido en distintos dispositivos omnipresente y eso me parece muy interesante. Yo hace poco estuve trabajando con unos modelos de Apple que también son muy pequeños y pueden correr en tu teléfono caben en el teléfono se pueden correr en el teléfono y la verdad que que ese futuro me parece más interesante que modelos monolíticos gigantescos a los que yo lo puedo acceder a través de una iPad
+10:52 Pere Martra: No son más interesantes, quizá a futuros, estarán los dos seguro, pero sí que es verdad que una empresa cuando desarrolla un producto lo que tenés una necesidad específica intentemos no utilizar, pero si necesitas de especificar un modelo de 700 millones de parámetros porque es que nos vamos a quedar sin planeta en 5 años.
+11:11 Fabricio Q: claro totalmente
+11:14 Pere Martra: Es decir para dar respuesta a cosas generalistas tener un modelo que te sea capaz de responder a cualquier cosa perfecto. Sí, entonces lo necesitamos y necesitas un especialista, no tres de él hace una cosa más pequeñita que va a funcionar mejor más rápido y consumiendo y consumiendo menos. En un principio viene a llenar este este hueco.
+11:39 Fabricio Q: Bueno, qué tan lejos estás de tu visión final de optimifer, nunca se termina no de trabajar en un proyecto, pero pero cuánto le falta que hay en el tintero que que podemos esperar los usuarios de optimizar en el futuro cercano.
+11:55 Pere Martra: Le falta le falta muchísimo. Yo diría que estamos al 25 o 30 por ciento sí, y
+11:59 Fabricio Q: wow
+12:00 Pere Martra: esto del Real Madrid que más o menos tengo en mente. Mi idea es de que también hemos hablado de la parte de optimización, pero y la segunda parte que es la dejo un poco aparcada para para más adelante, pero más adelante significa unos unos meses, no?
+12:21 Fabricio Q: Wow, o sea que vas a estar trabajando muy fuerte en el en el futuro cercano.
+12:21 Pere Martra: no no no no no no no no sí, porque también a la gente de manera inglés he conseguido incorporar un capítulo sobre Sobre fer que es algo que ha costado muchos editoriales, pues no están interesadas porque no es algo que venda tanto, pero sí que es como modificación del comportamiento de un modelo identificando que las diferencias entre. Y puedes ver qué partes están activando más y compartas están activando menos del modelo y entonces en el caso de que haya un comportamiento erróneo en modificar estas activaciones para alinearlo, un poco y esto es lo que lo que hace lo que hará optifer. Ahora te dan las herramientas, te da los datos. Tú le pasas los Proms y él te analiza y de cualquier capa de puedes obtener el mapa de activaciones de esa capa puedes obtener la media de activaciones de todas las capas y puedes una cosa que me encanta es obtener cómo se desplazan las palabras semánticamente, vale? Mira, esto no sé si te lo pase.
+13:35 Pere Martra: Hay una herramienta. Un como se llaman esas cosas que ponemos en face ya no me acuerdo un space.
+13:50 Fabricio Q: Como se llaman experiments que creo que te permiten correr.
+14:01 Pere Martra: A ver si no sé si compartir pantalla voy a conseguirlo porque soy muy malo ya con estas herramientas, aparte, es que nunca consigo utilizar la misma dos veces una vez. No, es verdad.
+14:12 Fabricio Q: cada maestro con su librito cada empresa con su con su app de
+14:16 Pere Martra: ella con mucha gente diferente siempre estoy, pues o con o con teams o con
+14:23 Pere Martra: https://huggingface.co/spaces/oopere/optipfair-bias-analyzer
+14:25 Pere Martra: Vale, aquí está el link y compartirlo. Va a ser skin?
+14:39 Fabricio Q: Lo abro para que me quede en el en el historial para después poder volver yo por mi cuenta excelente.
+14:48 Pere Martra: Ok, vale? Aquí tenemos, lo ves la pantalla.
+14:51 Fabricio Q: Sí, sí la veo.
+14:53 Pere Martra: Vale, venga, vamos a ver, entonces qué es lo que pasa aquí? Aquí podemos escoger un poco el el modelo, vale? Como ves se le pasa bueno, hay diferentes escenarios. Pero bueno, en definitiva es un prom que es exactamente igual y el modelo debe completar y tan solo cambia una variable.
+15:14 Fabricio Q: una para una palabra en donde donde te evidencia el vayas
+15:19 Pere Martra: Exacto sí y entonces desde aquí vamos a escoger una una capa. Bueno, podemos recoger. La salida de atención de la capacidad de seguridad ya nos va bien, pero puedes escoger cualquiera de las capas del modelo. Que al darle no tarda mucho unos segundos.
+15:38 Fabricio Q: Bien, notaba notaba eso y me asombró y me parece un algo muy bueno de optipi,
+15:39 Pere Martra: porque
+15:44 Fabricio Q: Fair es que es muy rápido, es una herramienta bastante rápida. Yo hubiera pensado que para procesar capas y eso necesitaba más tiempo y me sorprendía
+15:48 Pere Martra: No es sí, ves la imagen o la maximizó.
+15:52 Fabricio Q: verlo lo rápido que se ve. Ah, mira. Sí, la puedes maximizar un poquito claro, pero veo que inclusive semánticamente te da una visualización de la de las capas.
+16:09 Pere Martra: Exacto, sí, esto está pasando en la capa 7 de atención, vale? bueno, al ser la capa de atención lo que lo que se está moviendo es un poco el peso que le da a cada una de las palabras dentro de la frase pero si te fijas Black y White No son diferentes están en un espacio muy parecido porque realmente representan la raza de esa persona el color y no se mueve semánticamente es lo mismo lo que cambia es el significado de las otras palabras.
+16:39 Fabricio Q: claro
+16:41 Pere Martra: La bolsa si te fijas la bolsa es muy diferente, se la lleva una persona o se la lleva a otra lo que piensa el policía también cambia. Aquí se desplaza bastante. Bueno, pues todo esto son son herramientas, que lo que quiero es que lo utilicen los los resertes que se dedican a que van a estudiar sesgos. En modelos un poco aquí ves, ves? Esto es el tráfico, vale? Pero lo que realmente puedes obtener es una matriz con todos los datos, vale? Que después lo que lo que tenemos que estudiar es los gráficos es para para que quede. Para que quede bonito.
+17:19 Fabricio Q: Y al condensarte toda esta información en un gráfico es muy fácil para alguien que no viene de un background académico interpretar los resultados.
+17:30 Pere Martra: Sí, sí, sí, un poquito sabes esto aquí viene pues qué capas son las que se comportan más más diferente es normal el que haya esta esta crecida y vaya hacia hacia el final, porque claro, la diferencia se va a acrecentando a medida que se que te vas acercando al resultado. Y esto es para la generación del primer token, vale? Esto iría aumentando a medida que vas generando la respuesta, pero si tú ya controlas la diferencia en la generación del proyecto.
+18:02 Pere Martra: reduces lo que es el ángulo y la diferencia, pues no se no se maximiza tanto al final
+18:10 Fabricio Q: claro
+18:11 Pere Martra: ahora optifer que da tan solo las herramientas de visualización Vale, las herramientas de visualización y los datos no está el plugin. El que ya lo tengo hecho está aprobado, pero no está implementado en esta es una de las cosas que tendría que ir también. Hacia allí.
+18:36 Fabricio Q: Te hago te hago una una consulta, me parece muy bueno que que que estés proveyendo herramientas para analizar cuestiones relacionadas con el firmes de los models de los modelos, no, no es muy habitual la gente no piensa mucho en eso la gente no prueba si un modelo tiene varias y yo he detectado inclusive varias en mi uso personal. Decir este mismo Trump con otro modelo se comporta totalmente distinto y da resultado muy diferente en cuanto al contenido.
+19:09 Fabricio Q: Crees que se está prestando poca atención al tema de firmes?
+19:15 Pere Martra: Sí, yo sinceramente es lo que sé y lo que más que las soluciones. Que hay estoy empezando. Bueno, estoy empezando. Yo llevo meses, pero no, no tengo el tiempo de decir me voy a dedicar a esto exclusivamente un tiempo a las soluciones que se están haciendo. No acaban de funcionar del todo bien, no quiero decir que la mía vaya a funcionar del todo bien tampoco porque yo he hecho una prueba de concepto y eso te requiere de un estudio más, pero lo que se está haciendo es o reencear el modelo desde cero con datos que no sean sesgados, pero esto es una cosa que si lo reencenas tan solo con datos que no son sesgados no sabes qué es lo que le pasa al resto de la información.
+20:01 Fabricio Q: claro
+20:02 Pere Martra: Como mínimo con Notti fertilidad, entérame esta capa ensé nombre de la otra, te permitiría mantener mejor lo que es la la estructura de conocimiento del modelo. y si no, otra cosa que se estaba haciendo era controlar el desplazamiento de De los vectores, pero estos se acabó se ha acabado demostrando que no, que no funciona. Mi planteamiento es tan solo centrarte en aquellas neuronas que neuronas no sé cómo llamarlo, que siempre me equivoco, que sean las que realmente estén generando una diferencia significativa que tú es lo fulminas y el modelo pierde totalmente su funcionalidad, pues es intentar detectar, cuáles son los que te están afectando en la respuesta que tú crees que no, que no es buena. Pero esto queda queda bastante, eh? Lo primero que tengo que hacer es estudiar.
+21:09 Pere Martra: Si hay neuronas que se especializan en ser sesgadas. Porque si no estaremos.
+21:15 Fabricio Q: Claro, como que el sesgo estás concentrado en esa parte particular de la
+21:20 Pere Martra: claro
+21:20 Fabricio Q: arquitectura de la red.
+21:23 Pere Martra: Perdón, que me he equivocado. De donde quería ir yo aquí. No sé si viste este ejemplo.
+21:32 Fabricio Q: Lo publicaste hace unos días en Linkedin no sé si ayer o antes de ayer o o la
+21:37 Pere Martra: Mira este de aquí era el del vallas quieres decir este?
+21:38 Fabricio Q: semana pasada creo que lo yo lo vi antes de ayer. Y y todavía me queda, digo correr las notebooks y mirarlas, pero pero se ve muy muy bueno.
+21:57 Pere Martra: A ver si lo tengo el resultado por aquí. Bueno, esto esta es la respuesta modificada ya vale? Que aquí pues. Lo que hace el modelo eliminándole unas pocas unas pocas neuronas, eh? Un 0,1% o así y mantiene bastante bien el conocimiento y pues ya podríamos. Ajustar muchísimo más aquí lo que hace el policía es nada, llamar por ayuda pedir refuerzos ya está. Y en cambio en la primera respuesta.
+22:48 Pere Martra: Le dispara por la por las faldas, esto es lo primero es la primera respuesta que
+22:52 Fabricio Q: Claro, claro, claro, o sea, son modelos recientes con lo cual se supone que
+22:56 Pere Martra: que estamos hablando de llama 3.2 un billón de parámetros el último uno de los últimos modelos de llama, eh? No, no me he ido al GPT 2 de
+23:12 Fabricio Q: deberían atajar estos problemas antes de que lleguen al público general y veo la increíble diferencia. Al hombre negro le tiraron un tiro y lo mataron al hombre blanco lo que no, que solo estaba paseando.
+23:29 Pere Martra: Sí, bueno, Cup y entonces llegaron y si nos vamos a la respuesta con el modelo modificado después. Del solo eliminar, eh, ni reentrenar ni nada. Aquí lo tenemos exactamente es una respuesta muy parecida. Muchas gracias, muchas gracias a ver a ver se lo va creciendo poco a poco básicamente.
+24:08 Fabricio Q: Claro, claro, pasamos de darle un tiro a a no era un doctor que estaba caminando por el vecindario increíble, me parece fundamental que que haya gente como vos que contribuyan con este tipo de herramientas, tan importantes al Open Source es muy bueno, es muy bueno. Te felicito, la verdad que me me me me da un un gran, me da una gran esperanza en el futuro del del Open Source de ella y y lo que estás haciendo realmente es muy muy importante.
+24:51 Pere Martra: Vale, a dos cosas diferentes, vale? El Consejo primordial que que les doy es que
+24:53 Fabricio Q: Bien, excelente, no, no te quiero sacar mucho tiempo. Ya estamos un poco pasados del tiempo que nos habíamos propuesto, inicialmente Pere y sé que estás muy ocupado, si si te parece te hago una última pregunta que es más general y más para la comunidad. Cuál es tu consejo para la gente que se está metiendo en el en el en el campo no, que están empezando a aprender procesamiento de lenguaje que están estudiando quizás con tu con tu repositorio con tus libros, cuáles son tus consejos para para poder hacer un buen un buen una buena carrera un buen progreso en el en el dominio?
+25:40 Pere Martra: no, que no se aburran yo soy muy fan de estudiar de arriba a abajo es decir que algo que algo que te guste si es llamando una pis y es haciendo algo fácil, siga haciendo algo que no entiendes, no hay ningún problema dulce a lo avanza y una vez lo tengas. tira para abajo, ve a las ve a las bases, no te lo saltes esto, pero Que cada vez hagas un avance y luego vayas hacia hacia abajo a ver las bases y a modificarlo si quieres, vale un poco recursivo porque me he encontrado con mucha gente que cuando empezaron con el tema de inteligencia artificial. Lo primero Python después álgebra después un poco de cálculo.
+26:30 Fabricio Q: Claro de abajo para arriba.
+26:33 Pere Martra: Es un camino normal.
+26:38 Fabricio Q: Ese ese ha sido un poco mi camino. Yo vengo del del ámbito del software, tuve que liderar un equipo de de datos y como tenía que liderar los tuve que
+26:43 Pere Martra: sí
+26:47 Fabricio Q: aprender. Y y yo tengo la tendencia de que si no siento que no tengo la base, no me siento seguro como para avanzar y me di cuenta que fue un camino lento muy lento muy
+26:55 Pere Martra: Pero bueno, que nos pasa a todos a mí me pasa exactamente lo mismo y muchas
+26:58 Fabricio Q: muy lento muy de a poco digo, uy, no me acuerdo mi álgebra de bueno, vamos a matrices.
+27:11 Pere Martra: cosas que tengo que cambiar y que lo he descubierto después yo me he lanzado bastante, o sea, hay cosas que gestión de gestión de memoria. Ahí tengo, que ya lo tengo apuntado. Ya, ya sé, ya se mejorará, pero hay muchas cosas que cuando las voy haciendo yo tengo una idea. y le cojo tiro para adelante y después profundizó en Un poco en la en que se se fomenta esa esa idea, vale? Realmente lo que es mirar diferencia de activaciones, si te fijas no hay nada matemáticamente no hay nada de estas. Es tan solo. Tú coges pasas un forward por el modelo y es desactiva este este, no? Es muy sencillo.
+28:01 Pere Martra: El cómo funciona un modelo por dentro y yo también lo he oído aprendiendo con el tiempo no empecé, me voy a construir un modelo con Python desde cero, no, yo empecé usando los modelos y poco a poco y me he ido introduciendo en el conocimiento interno de ellos, esto me ha dado la capacidad de poder modificarlo, o sea también es decir, no te quedes. tan solo con el uso y con el resultado una vez ya, ya lo tienes y se te ha despertado la curiosidad de Cómo es esto a partir de ahí tira para abajo? Porque ya no ya cada cosa que descubras te va a despertar un ajá. Ah, vale, es así. Ah, ok es así y estos ajá son los que te van a hacer que continúes indagando en cómo funcionan las cosas.
+28:51 Fabricio Q: Muy bien, excelente excelente la última pregunta es para para la gente que que lea el artículo y para la gente de la comunidad, cómo cómo se puede contribuir con optipi Fair como como como se te puede dar una mano digo es una empresa muy grande para una sola persona por más que sean tan capaces como Pérez digo seguramente las manos las manos más manos para para trabajar en el proyecto seguramente vienen bien, cómo se te puede contribuir?
+29:25 Pere Martra: la verdad es que ahora ahora mismo no lo sé porque no he hecho no he puesto ni el roadmap en el en el contribuye lo que sé que me iría muy bien, es que se usara y todo lo que son cosas que no funcionan yo, por ejemplo, no he tenido la capacidad de utilizarlo en los grandes yo lo he corrido en mi GPU
+29:45 Fabricio Q: claro
+29:46 Pere Martra: Y ya está, es decir como como funciona como escala todo esto me iría muy bien el que alguien. Pues que tuviera acceso a una máquina más más grande más potente vieran y eran como como funciona con con modelos grandes. Si alguien quiere revisarlo pues. Esto esto me iría muy bien que se usara y se me comunicarán los los problemas mediante y sus o si alguien encuentra un eso quiere solucionarlo con un PR adelante.
+30:16 Fabricio Q: es mucho ella, ya has hecho muchísimo y seguís haciendo por la comunidad es
+30:16 Pere Martra: Ahora no tengo definido un roadmap como qué es lo que tendría que hacer realmente que definir un roadmap y poner las tareas y que alguien lo las pudiera ir cogiendo. Pero no, no me da no me da la vida.
+30:37 Fabricio Q: Es increíble cuál es el esta es una pregunta por bonos, cuál es tu secreto Pere para mantenerse, pero tan productivo en la comunidad digo, has publicado tu repo que tiene, no sé cuántos miles de estrellas haces el libro, pero además tenés tu actividad privada, no tenés tus proyectos, cómo haces para para
+30:56 Pere Martra: sí
+30:57 Fabricio Q: cuál es tu secreto para para mantenerte tan productivo?
+31:03 Pere Martra: Intento aprovechar mucho todo lo que hago todo lo que hago tiene como mínimo dos veces su utilidades optifer salió por un encargo de alguien que me dijo, mira, tenemos un modelo y se tiene que reducir. El consumo que tiene este modelo manteniendo el máximo su capacidad. Y a partir de allí, pues se ha ido generando de sé que notebook un notebook que puse en la sección de acabe poniendo la sección de pluginning del curso de ese notebook. Salió una librería que fue optifer después de ahí ha salido el proyecto nuevo que es el architective.
+31:45 Pere Martra: a la que me llega algo nuevo ahora ya sí que vigilo mucho que tenga que ver con mi universo es decir si alguien me dice, vamos a montar una solución rack, les digo, no hay gente mucho mejor que yo para crear un Puedo hacerlo pero ahora mismo no, no, ni me interesan ni ni soy el mejor puedes encontrar a gente que sepa hacerlo mejor tanto todo. Enfocarlo un poco para hacia lo mismo y ya te lo digo, eh? A la que hago un desarrollo.
+32:22 Pere Martra: Depende de la empresa que tenga puedo empezar por un notebook que va al curso y del notebook, se pasa a la librería o hago directamente la librería para solucionar lo que tiene que saber en el proyecto y después la que tengo tiempo, eso se va hacia hacia los note.
+32:38 Fabricio Q: Claro, claro, claro, clarísimo clarísimo. Bueno, pero voy a parar la grabación. Te agradezco infinitamente tu tiempo, ha sido muy generoso.
+32:43 Pere Martra: books
+32:48 Fabricio Q: Paro la grabación y te comento yo esto lo voy a desgravar, lo voy a armar, lo voy a traducir al inglés. Calculo que la semana que viene ya voy a estar listo como para publicar el artículo y la entrevista y te lo voy a compartir antes de publicarlo para que me des el ok cuando tenga tu ok recién ahí lo lo público y pensaba difundirlo por LinkedIn y el otro lugar donde pensaba difundirlos en el foro de Deep learning ahí que de hecho es ahí donde conocí tu trabajo.
+33:18 Pere Martra: vale, fantástico y hace mucho que no paso por eso sí que eso sí que lo he dejado, ya llegó un momento en el que no no podía y tuve que Y más que nada, porque también es un poco lo que digo en donde yo era tutor o mentor ahora no mentor era en el foro de tensorflow y ahora ya hace tiempo que no estamos contentos flow, si hubiera sido en el foro de sandwich models, que no sé si hay sacaron. Quizá hubiera seguido más proyectos.
+33:54 Fabricio Q: Es mucho, es mucho trabajo en mucho trabajo, ya haces mucho por por la
+33:59 Pere Martra: Pero cuando cuando lo tengas me avisas y me pasaré por allí a saludar.
+33:59 Fabricio Q: comunidad. Dale dale bueno, muchísimas gracias por por todo Pere y bueno seguimos en contacto, de verdad que te agradezco de corazón, el tiempo ha sido extremadamente generoso.
+34:15 Pere Martra: Vale, venga, hasta luego.
+34:17 Fabricio Q: Lo que pueda hacer siempre quiero quiero ofrecerte, digo yo no sé si tengo tanto para ofrecer como tú, pero si te puedo ayudar en cualquier cosa lo que sea con gusto opere más que dispuesto. Gracias.
+  
