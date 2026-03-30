@@ -2,10 +2,9 @@
 date: 2026-03-22
 title: "The OptiPFair Series #2: Healing the Golden Scar — Hardware-Aware and Data-Driven Pruning"
 tags:
-  - optipfair
-  - small language models
-  - pruning
   - pere martra
+  - optipfair
+  - featured
 author: Fabricio Q
 excerpt: 'Iteration is the pulse of open-source. How OptiPFair evolved to harmonize software and silicon through data-driven precision.'
 description: 'In the second episode of the OptiPFair Series, we explore the rapid evolution of Pere Martra’s model optimization library. We dive into the architectural elegance of hardware-aware width pruning using the expansion_divisor, and the shift from static analysis to dynamic, data-driven pruning via the Peak-to-Peak Magnitude (PPM) method. Discover how to build highly specialized, efficient Small Language Models (SLMs) that rhythmically align with Tensor Cores.'
@@ -13,6 +12,8 @@ published: true
 ---
 
 # The OptiPFair Series #2: Healing the Golden Scar — Hardware-Aware and Data-Driven Pruning
+
+![Optimizing LLMs with hardware and data alignment](../../assets/images/blog/032226/optipfair_2.png){align=left style="max-width: 200px; margin-right: 20px;"}
 
 In our [first conversation](121525-slms-with-optipfair.md) with Pere Martra, the architect behind OptiPFair, we exposed a structural limitation in the art of Small Language Models (SLMs)—what the Japanese art of *Kintsugi* would call a "golden scar", a flaw that, once repaired, makes the whole stronger. We noted a painful trade-off: width pruning, while surgically precise, fractured the native structure of the model. By arbitrarily slicing away neurons, the resulting tensors became jagged, falling out of step with the rigid, mathematical choreography that hardware accelerators (like Tensor Cores) demand to operate at peak efficiency. 
 
@@ -108,6 +109,9 @@ We do not hide our scars. In the spirit of radical honesty, the power of data-dr
 
 1. **The Destiny of the Dataloader**: When you provide a calibration dataset, you are telling the model *exactly* what matters. If your `dataloader` contains exclusively Python code, the PPM method will likely prune the neurons responsible for generating French poetry or answering historical facts. Why? Because those neurons remain silent when processing code, leading the algorithm to deem them "unimportant." The model becomes a razor-sharp specialist, but it loses its generalist soul. You must curate your calibration data with the utmost architectural care to ensure you don't prune capabilities you might actually need.
 2. **The Compute Tax**: Static pruning is instantaneous; it’s pure math on weights. Data-driven pruning requires a forward pass of your calibration data through the unpruned model to measure activations. It requires more compute upfront to save compute later in production.
+
+In our companion [Jupyter Notebook](../../../../articles/032226-optipfair/optipfair_series_2.ipynb), we put this to the ultimate test using a 1.23B parameter model. The mathematical proof of Pere's architecture is undeniable:
+A naive 40% static prune resulted in a damaged model that suffered catastrophic logic loss (endlessly printing `"Hello"` when asked to write a factorial function). However, pruning the exact same 40% using calibration data and an `expansion_divisor` of 64 yielded a specialized engine that shed over 320 million parameters (a ~26% size reduction), ran ~1.4x faster, and perfectly retained its ability to write recursive Python code. By padding the dimensions to the hardware grid, the specialist maintained its speed despite being technically slightly larger than the jagged static model.
 
 By healing the structural fractures with the `expansion_divisor` and opening the model's eyes with a `dataloader`, OptiPFair transcends mere optimization. It becomes an instrument of pure architectural intention.
 

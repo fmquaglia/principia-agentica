@@ -26,6 +26,7 @@ continues on LinkedIn. Follow for updates, share your thoughts, and let's archit
 <div id="featured" markdown>
 ## Latest from the Lab
 
+- [The OptiPFair Series #2: Healing the Golden Scar — Hardware-Aware and Data-Driven Pruning](blog/posts/032226-healing-the-golden-scar-optipfair.md)
 - [The OptiPFair Series #1: Forging the Future with Small Models — An Architectural Analysis with Pere Martra](blog/posts/121525-slms-with-optipfair.md)
 - [Memory in Agents: Episodic vs. Semantic, and the Hybrid That Works](blog/posts/091925-memory-in-agents.md)
 </div>
